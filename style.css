@@ -1,0 +1,151 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* navmeny */
+header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-bottom: 2px solid #ccc;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+ul.left {
+    list-style-type: none;
+    display: flex;
+    margin-right: auto;
+}
+
+ul.left li {
+    margin-right: 20px;
+}
+
+ul.left li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ul.left li a:hover {
+    color: orange;
+}
+
+.logo img {
+    height: 80px; 
+}
+
+/* Sektioner */
+section {
+    padding: 60px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+
+.content {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+.text {
+    flex: 1; 
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+/* fick inte rätt på dessa men ja */
+.image-right {
+    max-width: 40%; 
+    height: auto;  
+    margin-top: 10px;  
+    margin-bottom: 10px; 
+}
+
+/* vet inte varför de inte funkar i hemsida, är väl något annat som gör att det inte fungerar */
+.image-left {
+    max-width: 40%; 
+    height: auto;   
+    margin-top: 10px;   
+    margin-bottom: 10px; 
+   /* float: left;*/
+}
+
+*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsiv design */
+/* har dock inte kollat på nån annan skärm än min dator så den kan va helt konstig */
+@media (max-width: 768px) {
+    header {
+        height: 60px; 
+    }
+
+    ul.left {
+        flex-direction: column; 
+        margin-right: 0;
+    }
+
+    ul.left li {
+        margin: 10px 0; 
+    }
+
+    .logo img {
+        height: 50px; 
+    }
+
+    section {
+        padding: 30px; 
+    }
+
+    nav {
+        flex-direction: column; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    ul.left li a {
+        font-size: 16px; 
+    }
+
+    .logo img {
+        height: 40px; 
+    }
+}
